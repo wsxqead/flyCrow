@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f8ff; /* 배경색을 부드러운 파스텔 톤으로 설정 */
+}
+
+canvas {
+  border: 2px solid #333;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+#startButton,
+#easyButton,
+#mediumButton,
+#hardButton {
+  background-color: #ff6f61;
+  color: white;
+}
+
+#startButton:hover,
+#easyButton:hover,
+#mediumButton:hover,
+#hardButton:hover {
+  background-color: #e55b50;
+}
+
+#difficultyButtons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
