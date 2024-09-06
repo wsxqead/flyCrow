@@ -5,13 +5,19 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  background-color: #f0f8ff; /* 배경색을 부드러운 파스텔 톤으로 설정 */
+  background-color: #f0f8ff;
+}
+
+img#eveImage {
+  width: 200px; /* 이미지를 적절한 크기로 조정 */
+  height: auto;
+  margin-top: 20px; /* 버튼과의 간격 조정 */
 }
 
 canvas {
   border: 2px solid #333;
   background-color: #fff;
-  margin-top: 20px;
+  margin-top: 10px; /* 점수와 캔버스 사이의 간격을 줌 */
 }
 
 button {
@@ -33,7 +39,7 @@ button:hover {
 #easyButton,
 #mediumButton,
 #hardButton {
-  background-color: #ff6f61;
+  background-color: #b6edca;
   color: white;
 }
 
@@ -41,11 +47,66 @@ button:hover {
 #easyButton:hover,
 #mediumButton:hover,
 #hardButton:hover {
-  background-color: #e55b50;
+  background-color: #b6edca;
 }
 
 #difficultyButtons {
   display: flex;
   gap: 15px;
   margin-top: 20px;
+}
+
+/* 캔버스 외부 점수 표시 스타일 */
+#score {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid #b6edca;
+  margin-bottom: 10px; /* 캔버스와 점수 사이의 간격 */
+}
+
+#audioControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#muteButton {
+  background-color: #b6edca;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#muteButton:hover {
+  background-color: #a0d6b4;
+}
+
+#volumeSlider {
+  width: 150px;
+}
+
+/* 재시작 버튼 스타일링 */
+#restartButton {
+  background-color: #b6edca;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+  background-color: #a0d6b4;
 }

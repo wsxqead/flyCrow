@@ -29,14 +29,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <img
+      id="eveImage"
+      src="src/eve.jpg"
+      alt="매니저 이브"
+      style="display: block; margin-bottom: 20px; border-radius: 25px"
+    />
     <canvas id="gameCanvas" style="display: none"></canvas>
     <div id="score" style="display: none">0</div>
+    <!-- 게임 시작 버튼 -->
     <button id="startButton">게임 시작</button>
-    <div id="difficultyButtons" style="display: none">
-      <button id="easyButton">쉬움</button>
-      <button id="mediumButton">중간</button>
-      <button id="hardButton">어려움</button>
+
+    <!-- 음소거 버튼과 볼륨 슬라이더 -->
+    <div id="audioControls" style="display: none">
+      <button id="muteButton">🔈</button>
+      <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.5"
+      />
     </div>
+
+    <!-- 재시작 버튼 -->
+    <button id="restartButton" style="display: none">재시작</button>
+
     <script src="script.js"></script>
   </body>
 </html>
