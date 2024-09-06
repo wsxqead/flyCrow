@@ -26,7 +26,7 @@ let bgOpacity = 0.5; // 배경 투명도 설정 (0.5로 설정하여 반투명)
 const eveAudio = new Audio("audio/eve.mp3");
 const bgAudio = new Audio("audio/bg.mp3");
 bgAudio.loop = true;
-bgAudio.volume = 0.5; // 초기 볼륨을 낮게 설정
+bgAudio.volume = 0.3; // 초기 볼륨을 낮게 설정
 
 let pipesPassed = 0; // 파이프를 넘은 횟수
 
@@ -66,8 +66,8 @@ let bird = {
   y: 150,
   width: 30,
   height: 30,
-  gravity: 0.15,
-  lift: -6, // 점프 높이
+  gravity: 0.25,
+  lift: -7, // 점프 높이
   velocity: 0,
 };
 
@@ -114,6 +114,10 @@ function update() {
 
   bird.velocity += bird.gravity;
   bird.y += bird.velocity;
+
+  // 속도가 너무 커지지 않도록 제한
+  if (bird.velocity > 10) bird.velocity = 10; // 하강 속도 제한
+  if (bird.velocity < -10) bird.velocity = -10; // 상승 속도 제한
 
   if (bird.y + bird.height >= canvas.height || bird.y <= 0) {
     endGame(); // 화면 상단이나 하단에 닿으면 게임 종료
