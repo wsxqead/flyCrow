@@ -11,7 +11,7 @@ body {
 img#eveImage {
   width: 200px; /* 이미지를 적절한 크기로 조정 */
   height: auto;
-  margin-top: 20px; /* 버튼과의 간격 조정 */
+  margin-top: 10px; /* 버튼과의 간격 조정 */
 }
 
 canvas {
@@ -21,8 +21,8 @@ canvas {
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 20px;
+  padding: 10px 20px; /* 모바일에서는 버튼 크기 축소 */
+  font-size: 16px; /* 글씨 크기 축소 */
   font-weight: bold;
   margin: 10px;
   border: none;
@@ -58,11 +58,11 @@ button:hover {
 
 /* 캔버스 외부 점수 표시 스타일 */
 #score {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   color: white;
   background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 8px;
   border: 2px solid #b6edca;
   margin-bottom: 10px; /* 캔버스와 점수 사이의 간격 */
@@ -109,4 +109,24 @@ button:hover {
 
 #restartButton:hover {
   background-color: #a0d6b4;
+}
+
+/* 모바일 화면에 대한 추가 스타일 */
+@media (max-width: 768px) {
+  img#eveImage {
+    width: 80px; /* 모바일 화면에서 이미지 크기 더 작게 */
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  #score {
+    font-size: 24px; /* 모바일에서 점수 크기 조정 */
+  }
+
+  #volumeSlider {
+    width: 120px; /* 슬라이더 크기 축소 */
+  }
 }
