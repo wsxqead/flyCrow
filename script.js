@@ -264,6 +264,13 @@ canvas.addEventListener("click", () => {
   }
 });
 
+// 스페이스바로 점프
+window.addEventListener("keydown", (event) => {
+  if (event.code === "Space" && isGameRunning && !gamePaused) {
+    bird.velocity = bird.lift;
+  }
+});
+
 // 음소거 버튼 클릭 이벤트
 muteButton.addEventListener("click", () => {
   if (bgAudio.muted) {
